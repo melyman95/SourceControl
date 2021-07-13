@@ -27,26 +27,45 @@ namespace SourceControl
             }
 
             string userName = getName();
+
             Console.Write("Hello " + userName + ", that's a great name. ");
 
             string userAge = getAge();
             if (Int32.Parse(userAge) >= 65) {
-                Console.Write(userAge + "?! Wow, you're old.");
+                Console.WriteLine(userAge + "?! Wow, you're old.");
+                Console.WriteLine(" Here's as many smiley faces as you are old.");
+
+                for (int i = 1; i < Int32.Parse(userAge); i++) {
+                    makeSmiley();
+                }
+
                 Console.ReadKey();
             }
 
             if (Int32.Parse(userAge) <= 64 && Int32.Parse(userAge) >= 21) {
-                Console.Write(userAge + " huh? You're not very old or very young.");
+                Console.WriteLine(userAge + " huh? You're not very old or very young.");
+                Console.WriteLine(" Here's as many smiley faces as you are old.");
+
+                for (int i = 1; i < Int32.Parse(userAge); i++)
+                {
+                    makeSmiley();
+                }
                 Console.ReadKey();
             }
 
             if (Int32.Parse(userAge) <= 20) {
-                Console.Write(userAge + " ? Shouldn't you be in school or something?");
+                Console.WriteLine(userAge + " ? Shouldn't you be in school or something?");
+                Console.WriteLine(" Here's as many smiley faces as you are old.");
+
+                for (int i = 1; i < Int32.Parse(userAge); i++)
+                {
+                    makeSmiley();
+                }
                 Console.ReadKey();
             }
 
-            void makeLenny() {
-                Console.WriteLine("( ͡° ͜ʖ ͡°)");
+            void makeSmiley() {
+                Console.Write("☺ ");
             }
         }
     }
