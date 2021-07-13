@@ -44,6 +44,10 @@ namespace SourceControl
                 Console.Write(userAge + " ? Shouldn't you be in school or something?");
                 Console.ReadKey();
             }
+
+            void makeLenny() {
+                Console.WriteLine("( ͡° ͜ʖ ͡°)");
+            }
         }
     }
 }
